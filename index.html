@@ -21,7 +21,16 @@
     </div>
 </div>
 <script>
+    const content = document.querySelector('.content');
+    const item  = document.getElementById('item');
+    const button = document.getElementById('add');
 
+    button.addEventListener('click', function (e){
+        const list = document.createElement('li');
+        list.innerHTML = `${item.value}`;
+        content.insertAdjacentElement('afterend', list);
+        item.value = '';
+    })
 </script>
 
 </body>
